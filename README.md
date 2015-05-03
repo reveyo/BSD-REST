@@ -1,7 +1,9 @@
 # BSD-REST
 
 This is a simple REST API for BSD
+
 A Python 3 script for uWSGI. It returns JSON objects.
+
 Tested on Raspberry Pi with FreeBSD 10.1
 
 At this time this script reacts on the following requests:
