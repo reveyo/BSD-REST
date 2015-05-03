@@ -2,7 +2,8 @@
 
 This is a simple REST API for BSD
 
-A Python 3 script for uWSGI. It returns JSON objects.
+* api.py - is a Python 3 script for uWSGI. It returns JSON objects.
+* _bsdgpiomodule.patch - is a patch for freebsd-gpio module
 
 Tested on Raspberry Pi with FreeBSD 10.1
 
