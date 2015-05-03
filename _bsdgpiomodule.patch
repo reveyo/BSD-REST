@@ -1,0 +1,23 @@
+200a201,208
+> static struct PyModuleDef _bsdgpiomodule = {
+>     PyModuleDef_HEAD_INIT,
+>     "_bsdgpio",
+>     "BSD GPIO Module",
+>     -1,
+>     GpioMethods
+> };
+> 
+202c210
+< init_bsdgpio(void)
+---
+> PyInit__bsdgpio(void)
+206c214
+<     m = Py_InitModule("_bsdgpio", GpioMethods);
+---
+>     m = PyModule_Create(&_bsdgpiomodule);
+208c216
+<         return;
+---
+>         return NULL;
+212a221
+>     return m;
