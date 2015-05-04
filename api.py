@@ -121,7 +121,7 @@ def gpioapi ( env, start_response ):
                     if ( val.upper() in configs ):
                         pin.config = configs[ val.upper() ]
         if ( (request == 'PUT') or (request == 'GET') ):
-            gpiol[p] = { 'name': pin.name, 'value': value, 'config': flags2str(pin.config), 'caps': flags2list(pin.caps) }
+            gpiol[p] = { 'name': pin.name, 'value': pin.value, 'config': flags2str(pin.config), 'caps': flags2list(pin.caps) }
             jgpiol = json.dumps(gpiol)
             resp = jgpiol.encode('utf-8')
             start_response( '200 OK', [('Content-type', 'application/json')] )
